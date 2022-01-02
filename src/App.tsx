@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Resultados from './components/Resultados/Resultados';
+
+import './styles/normalize.css';
+import './styles/skeleton.css';
 
 function App() {
+  const [categoria, setCategoria] = useState('pizza');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar
+        setCategoria={setCategoria}
+      />
+      <div className="container">
+        <Resultados
+          categoria={categoria}
+        />
+      </div>
+    </>
   );
 }
 

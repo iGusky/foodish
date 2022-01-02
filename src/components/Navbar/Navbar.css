@@ -1,0 +1,18 @@
+
+.header{
+  padding: 10px 10px 0 10px;
+}
+h1 {
+  text-align: center;
+}
+button {
+  width: 100%;
+}
+
+/* Larger than mobile */
+@media (min-width: 750px) {
+  .buttons-container{
+    display: flex;
+    justify-content: space-around;
+  }
+}
